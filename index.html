@@ -18,29 +18,24 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://alyssaclark.org" />
-    <meta property="og:image" content="https://alyssaclark.org/images/og-image.jpg" />
+    <meta property="og:image" content="https://alyssaclark.org/images/portrait.jpg" />
 
-    <!-- Favicon -->
     <link
       rel="icon"
       href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>"
     />
-
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/styles.css" />
   </head>
 
   <body>
-    <!-- ============================================
-       HEADER / NAVIGATION
-       ============================================ -->
     <header class="site-header">
       <div class="container">
         <a href="/" class="logo">Alyssa Clark</a>
-        <nav>
+        <nav aria-label="Main">
           <ul class="site-nav">
             <li><a href="/services">Services</a></li>
             <li><a href="/projects">Projects</a></li>
-            <li><a href="https://www.linkedin.com/in/clark-alyssa/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="/#about">About</a></li>
             <li><a href="mailto:me@alyssaclark.org">Contact</a></li>
           </ul>
         </nav>
@@ -49,18 +44,14 @@
 
     <main>
       <!-- ============================================
-         HERO — BIG TEXT + SMALL PHOTO
-         Edit the text below to update your intro.
+         HERO — edit the intro text below
          ============================================ -->
       <section class="hero">
         <div class="container">
           <div class="hero-inner">
-            <div class="hero-text">
-              <h1>
-                Alyssa
-                <br />
-                <span class="highlight">Clark</span>
-              </h1>
+            <div>
+              <p class="eyebrow">Impact consultant · London</p>
+              <h1>Alyssa <span class="highlight">Clark</span></h1>
               <p class="tagline">Impact Measurement · Strategy · Operations</p>
 
               <div class="bio">
@@ -80,73 +71,120 @@
 
               <div class="hero-ctas">
                 <a href="mailto:me@alyssaclark.org" class="btn btn-primary">Get in touch</a>
-                <a
-                  href="https://www.linkedin.com/in/clark-alyssa/"
-                  target="_blank"
-                  rel="noopener"
-                  class="btn btn-outline"
-                >
-                  LinkedIn
-                </a>
-                <a href="files/alyssa-clark-cv.pdf" class="btn btn-outline btn-small" download>Download CV ↓</a>
+                <a href="/files/alyssa-clark-cv.pdf" class="btn btn-outline" download>Download CV ↓</a>
+                <a href="https://www.linkedin.com/in/clark-alyssa/" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn</a>
               </div>
             </div>
 
             <div class="hero-photo">
-              <img src="images/headshot.jpg" alt="Alyssa Clark" />
+              <img src="/images/portrait.jpg" alt="Portrait of Alyssa Clark" width="800" height="1000" />
             </div>
-          </div>
-
-          <div class="scroll-cue">
-            <span class="arrow">↓</span>
-            See what I do
           </div>
         </div>
       </section>
 
       <!-- ============================================
-         SERVICES SUMMARY
-         Brief overview — full detail on services.html
+         SERVICES SUMMARY — full detail on services.html
          ============================================ -->
-      <section id="services" class="services-summary">
-        <div class="container">
-          <h2 class="section-heading">Services</h2>
-          <p class="section-subheading">How I work with organizations to drive impact.</p>
-
-          <div class="services-grid fade-in-stagger">
-            <a href="/services#measurement" class="service-card fade-in">
-              <div class="card-number">01</div>
-              <h3>Measurement &amp; Evaluation</h3>
-              <p>
-                Theory of change, results frameworks, data systems, and evaluation design. Helping organizations
-                understand what's working and why.
-              </p>
-            </a>
-
-            <a href="/services#strategy" class="service-card fade-in">
-              <div class="card-number">02</div>
-              <h3>Strategy &amp; Program Design</h3>
-              <p>
-                Strategic planning, stakeholder alignment, governance design, and impact strategy. Moving groups from
-                complexity to clarity.
-              </p>
-            </a>
-
-            <a href="/services#operations" class="service-card fade-in">
-              <div class="card-number">03</div>
-              <h3>Operations &amp; Project Management</h3>
-              <p>
-                Data systems, governance protocols, workflows, and end-to-end project management. Building
-                infrastructure that makes good work sustainable.
-              </p>
-            </a>
+      <section id="services" class="section">
+        <div class="container section-grid">
+          <h2 class="section-label">Services</h2>
+          <div>
+            <ul class="services-list">
+              <li>
+                <a href="/services#measurement">
+                  <span class="num">01</span>
+                  <h3>Measurement &amp; Evaluation</h3>
+                  <p>
+                    Theory of change, results frameworks, data systems, and evaluation design. Helping organizations
+                    understand what's working and why.
+                  </p>
+                </a>
+              </li>
+              <li>
+                <a href="/services#strategy">
+                  <span class="num">02</span>
+                  <h3>Strategy &amp; Program Design</h3>
+                  <p>
+                    Strategic planning, stakeholder alignment, governance design, and impact strategy. Moving groups
+                    from complexity to clarity.
+                  </p>
+                </a>
+              </li>
+              <li>
+                <a href="/services#operations">
+                  <span class="num">03</span>
+                  <h3>Operations &amp; Project Management</h3>
+                  <p>
+                    Data systems, governance protocols, workflows, and end-to-end project management. Building
+                    infrastructure that makes good work sustainable.
+                  </p>
+                </a>
+              </li>
+            </ul>
+            <div class="section-cta">
+              <a href="/services" class="link-arrow">View full services <span aria-hidden="true">&rarr;</span></a>
+            </div>
           </div>
+        </div>
+      </section>
 
-          <div class="services-cta">
-            <a href="/services" class="link-arrow">
-              View full services
-              <span class="arr">→</span>
-            </a>
+      <!-- ============================================
+         RECENT PROJECTS — the newest few from /projects
+         ============================================ -->
+      <section id="projects" class="section">
+        <div class="container section-grid">
+          <h2 class="section-label">Recent projects</h2>
+          <div>
+            <ul class="project-list">
+                <li class="project-item">
+                  <a href="/projects/statewide-data-strategy">
+                    <span class="project-year">2026</span>
+                    <div>
+                      <div class="tags">
+                        <span class="tag">Strategy</span>
+                        <span class="tag">Measurement</span>
+                      </div>
+                      <h3>Statewide Data Strategy</h3>
+                      <p>Designed a statewide data strategy, governance framework, and 30+ tools and guides to help Utah's Promise serve as a data intermediary for communities across the state.</p>
+                    </div>
+                    <span class="project-arrow" aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+
+                <li class="project-item">
+                  <a href="/projects/citation-review">
+                    <span class="project-year">2026</span>
+                    <div>
+                      <div class="tags">
+                        <span class="tag">Research</span>
+                        <span class="tag">Communication</span>
+                      </div>
+                      <h3>Pre-Publication Citation Review</h3>
+                      <p>Reviewed and strengthened the citations in a strategic planning report ahead of publication, verifying each source and adding references where the evidence base could be stronger.</p>
+                    </div>
+                    <span class="project-arrow" aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+
+                <li class="project-item">
+                  <a href="/projects/promise-communities-playbook">
+                    <span class="project-year">2026</span>
+                    <div>
+                      <div class="tags">
+                        <span class="tag">Strategy</span>
+                        <span class="tag">Communication</span>
+                      </div>
+                      <h3>Promise Communities Playbook</h3>
+                      <p>Wrote and designed a 12-chapter playbook to support emerging Promise Communities across Utah, built around a developmental pathway that helps each community see where it is and what support it needs next.</p>
+                    </div>
+                    <span class="project-arrow" aria-hidden="true">&rarr;</span>
+                  </a>
+                </li>
+            </ul>
+            <div class="section-cta">
+              <a href="/projects" class="link-arrow">All projects <span aria-hidden="true">&rarr;</span></a>
+            </div>
           </div>
         </div>
       </section>
@@ -154,71 +192,40 @@
       <!-- ============================================
          ABOUT & CONTACT
          ============================================ -->
-      <section id="contact" class="about-contact fade-in">
-        <div class="container">
-          <h2 class="section-heading">About</h2>
+      <section id="about" class="section">
+        <div class="container section-grid">
+          <h2 class="section-label">About</h2>
+          <div class="about-text">
+            <p>
+              I hold an MSc in Human Rights from LSE and an MPA from Brigham Young University. Before consulting
+              independently, I led data strategy at Promise Partnership Utah, a cradle-to-career collective impact
+              partnership, and delivered concurrent client engagements at Cicero Group, a boutique strategy
+              consultancy.
+            </p>
+            <p>
+              I've presented at national conferences, contributed to sector publications, and built networks across the
+              collective impact and racial equity fields. I'm available for project-based and ongoing engagements.
+            </p>
 
-          <div class="about-inner">
-            <div class="about-text">
-              <p>
-                I hold an MSc in Human Rights from LSE and an MPA from Brigham Young University. Before consulting
-                independently, I led data strategy at Promise Partnership Utah, a cradle-to-career collective impact
-                partnership, and delivered concurrent client engagements at Cicero Group, a boutique strategy
-                consultancy.
-              </p>
-              <p>
-                I've presented at national conferences, contributed to sector publications, and built networks across
-                the collective impact and racial equity fields. I'm available for project-based and ongoing engagements.
-              </p>
-            </div>
-
-            <div class="contact-block">
-              <h3>Get in touch</h3>
-              <ul class="contact-list">
-                <li><a href="mailto:me@alyssaclark.org">me@alyssaclark.org</a></li>
-                <li><a href="https://www.linkedin.com/in/clark-alyssa/" target="_blank" rel="noopener">LinkedIn</a></li>
-                <li><a href="files/alyssa-clark-cv.pdf" download>Download CV ↓</a></li>
-              </ul>
-            </div>
+            <ul class="contact-list">
+              <li><a href="mailto:me@alyssaclark.org">me@alyssaclark.org</a></li>
+              <li><a href="https://www.linkedin.com/in/clark-alyssa/" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="/files/alyssa-clark-cv.pdf" download>Download CV ↓</a></li>
+            </ul>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- ============================================
-       FOOTER
-       ============================================ -->
     <footer class="site-footer">
       <div class="container">
+        <p>&copy; 2026 Alyssa Clark</p>
         <div class="footer-links">
           <a href="mailto:me@alyssaclark.org">me@alyssaclark.org</a>
           <a href="https://www.linkedin.com/in/clark-alyssa/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="/files/alyssa-clark-cv.pdf">CV</a>
         </div>
-        <p class="copyright">&copy; 2026 Alyssa Clark</p>
       </div>
     </footer>
-
-    <!-- Scroll-reveal animation -->
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const els = document.querySelectorAll(".fade-in");
-        if (!("IntersectionObserver" in window)) {
-          els.forEach((el) => el.classList.add("visible"));
-          return;
-        }
-        const obs = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((e) => {
-              if (e.isIntersecting) {
-                e.target.classList.add("visible");
-                obs.unobserve(e.target);
-              }
-            });
-          },
-          { threshold: 0.15 },
-        );
-        els.forEach((el) => obs.observe(el));
-      });
-    </script>
   </body>
 </html>
