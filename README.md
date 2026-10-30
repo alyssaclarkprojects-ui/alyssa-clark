@@ -15,26 +15,17 @@ Plain HTML and CSS. Hosted on GitHub Pages.
 ## Structure
 
 ```
-index.html          Homepage: intro, services, three most recent projects, about
+index.html          Homepage: hero, services overview, about/contact
 services.html       Full service details
-projects/index.html Project list (most recent first)
+projects.html       Project grid
 projects/*.html     Individual project pages
 styles.css          All styling (colour variables at top)
 fonts/              Self-hosted web fonts
-images/            Portrait (homepage) and og-image.jpg (link previews)
-yoga/               Standalone yoga page with its own stylesheet (yoga-base.css)
 ```
 
 ## Editing
 
-All content lives directly in the HTML files. Look for the comment banners marking each section.
-
-To add a project:
-
-1. Copy an existing page in `projects/` and update the tags, title, client/year line and body.
-2. Add an `<li class="project-item">` entry to `projects/index.html`, keeping the list in reverse chronological order.
-3. Update the "Older/Newer" links at the bottom of the neighbouring project pages.
-4. If it's one of the three newest, swap it into the "Recent projects" list on `index.html`.
+All content lives directly in the HTML files. Look for comments like `<!-- EDIT YOUR BIO HERE -->`.
 
 To retheme, edit the CSS custom properties at the top of `styles.css`.
 
