@@ -460,7 +460,7 @@ a {
 }
 
 .section-grid .project-item a {
-  grid-template-columns: 4rem 1fr 1.5rem;
+  grid-template-columns: 5.5rem 1fr 1.5rem;
 }
 
 .project-year {
@@ -762,7 +762,8 @@ a {
     padding: 3.5rem 0 2rem;
   }
 
-  .project-item a {
+  .project-item a,
+  .section-grid .project-item a {
     grid-template-columns: 1fr;
     gap: 0.35rem;
   }
@@ -777,6 +778,13 @@ a {
 
   .project-pager .next {
     grid-column: 1;
+  }
+}
+
+/* Very narrow phones: drop "About" so the nav fits */
+@media (max-width: 380px) {
+  .site-nav li:nth-child(3) {
+    display: none;
   }
 }
 

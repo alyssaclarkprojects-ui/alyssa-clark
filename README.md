@@ -21,7 +21,7 @@ projects/index.html Project list (most recent first)
 projects/*.html     Individual project pages
 styles.css          All styling (colour variables at top)
 fonts/              Self-hosted web fonts
-images/portrait.jpg Cropped, compressed headshot used on the homepage
+images/            Portrait (homepage) and og-image.jpg (link previews)
 yoga/               Standalone yoga page with its own stylesheet (yoga-base.css)
 ```
 
